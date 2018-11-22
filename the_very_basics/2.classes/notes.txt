@@ -1,0 +1,44 @@
+# Classes
+## Class Of My Own
+  - A class pulls together related data
+  - It also adds functions to operate on that data
+
+### Designing a class and coding
+  - Member variables are usualy private (Encapsulation)
+  - Functions we think of early are usualy public (Services)
+  - Some classes need constructors
+  -> class {... many lines ...};
+      -> prvate:
+      -> public:
+      -> namespace resolver ::
+
+## Inline Functions
+  - Fucntions have performance impact:
+      - code generated to keep track of run position
+      - transfer control oer to another place in binary file
+      - execute code
+      - transfer control back
+      --> Overhead!
+  - C++ can do something called inlining, something looks like a function but isnt at runtime makes it faster.
+  - Compiller chooses what to Inline (hint to compiler : put function in header file)
+
+## Encapsulation
+  - A well writen class is changeable
+  - Make all your member variables private
+    - code outside the class cant count on their names or types
+    - you can change type without breaking code outside classes
+    - code outside the class doesnt need to know the rules or remember them
+      - you can change the business rules
+  - Public member functions can act as gatekeepers
+    - like getters and setters (no need for every variable)
+      - in fact as few as possible
+  - the more encapsulated the better (more private the better), since changes in ones part of the code
+  dont affect other places and causes less bugs elsewhere.
+
+## Instances
+  - constructors with no arguments is a default constructors ==> Class c ==> no arguments
+  - constructors with arguments ==> Class c(arg1, arg2)
+  - dont use '=' when initializing an object
+
+## Future Work
+  - destructors (cleanup)
