@@ -1,0 +1,23 @@
+# Legacy Constructs
+## Casting
+  int i = (int) 4.9; is the same as int i = static_cast<int>(4.9);
+
+## Macros
+  #define Pi 3.14 -> substitutes Pi for 3.14
+  const double Pi = 3.14 better in c++
+  #define SQR(x) (x*x) -> old style inlining gets SQR(1+1) wrong -> better to use functions
+
+## C Style arrays
+  int numbers[4];
+  int numbers[] = {1,2,3,4};
+  -> doesnt know how long it is
+
+## C Style strings
+  c style array of characters
+  terminated by '\0' signal
+  std::string can construct char*string
+
+## Pointers
+    int* pi // pi is pointer to integer
+    int j=4; pi = &j; // address of j
+    *pi = 3; // changes j's value, changes what is pointed by pi (which is an address)
