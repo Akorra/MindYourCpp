@@ -1,0 +1,20 @@
+# TOOLS
+## Compiler and Linker
+## Editor
+## Debugger
+
+## Building
+  .cpp ->compile-> obj.o ->link-> example
+
+## Popular Tools
+  - Compile and Link: GCC and Clang
+  - IDE: VS, CLion,...
+  - check isocpp.org/get-started
+
+## Kinds of Applications
+  - Apps;
+  - Console Applications;
+  - Services;
+  - Servers;
+  - Libraries;
+  - ...;

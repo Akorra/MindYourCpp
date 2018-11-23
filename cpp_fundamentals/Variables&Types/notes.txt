@@ -1,0 +1,15 @@
+# Variables and Types
+## Basics - Variables
+  - C++ is strongly typed
+  - User defined types are a thing that is suported (Struct and Class)
+
+## Fundamental Types
+  - Integers (short, long, int)
+  - Real Numbers (float, double)
+  - Character (char, unsigned char)
+  - Booleans (true/false)
+
+## Auto
+  - asks compile rto deduce the type.
+  - still strongly typed.
+  - useful for ugly declarations.
