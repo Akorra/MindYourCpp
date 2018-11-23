@@ -1,0 +1,28 @@
+ ## Command line Arguments
+  - main function should look like this:
+      int main(int argc, char* argv[])
+      {
+        return 0;
+      }
+      - reads parameters from command prompt ex (small.exe -g Hello 12)
+  - argv[] C-style collection
+  - char* C-style string
+  - argc count of arguments passed in
+
+## Visual Studio
+  - Pre compiled headers "stdafx.h" -> contains header file includes
+  - extra files "targetver.h" (windows version) ReadMe.txt
+  - Code can suport Unicode and non-Unicode with the flip of a switch _t
+  - #pragma once -> instruction to preprocessor, include file is not included multiple times...
+  - main function
+          int _tmain(int argc, _TCHAR* argv[]){}  -> _t unicode flip
+
+## Make Files
+  - Make Files : -> Can save typing a lot of names and options
+                 -> Shorten build times (builds only changed files)
+                 -> Maintenance by hand
+  - Make is a separate tool that calls the compiler
+  - May need to specify the version of C++ (depends on the compiler)
+
+## Note:
+    g++ *.cpp compiles all files in target (in simple_classes dir -> g++ src/*.cpp)

@@ -1,0 +1,44 @@
+# Topics to learn
+## Lots of Syntax
+## Debugging
+## Casting
+    example: i = static_cast<int>(4.9);
+## Const Keyword
+    - unchangeable variable const int amount = 90
+    - ading const keyword to constructor prevents from changing any variables: -> int class::function() const {} ->
+## Standard Library
+    <iostream> <string> <vector>  ...
+    - cplusplus.com/reference/ -> check standard library
+## Passing parameters
+    -> foo(obj bar) passes in a copy of argument so bar isnt changed
+    -> If we need it to change we can pass by reference -> foo(obj& bar) -> reference to Librar
+    -> Since passing by reference is faster if we dont want it to change -> foo(const obj& bar)
+## Manage Resources
+    -> Destructors!!! ~Class()
+## Scope
+    -> Constructor runs when object comes into Scope
+    -> Destructor runs when object goes out of scope
+## Exceptions
+## Free Store -> Heap
+    - Raw pointers
+    - std::share_ptr and std::unique_ptr
+    - Memory management
+    - Learn from modern material
+    - RAII, Rule of 3 Rule of 5
+## Lambdas
+
+## Smaller details
+  - Inheritance
+  - enum keyword
+  - boolean operators && and ||, shortcutting
+  - interacting with OS
+  - Bitwise operations &|^!<<>>
+  - switch
+  - Punctuation: %, & * ->, ?
+  - Default parameters function
+  - Template functions
+  - overloading
+
+## MORE
+  - how to write applications (Windows, Windows store, Windows Phone, Unix, Web service, Service,...)
+  - Frameworks and libraries
