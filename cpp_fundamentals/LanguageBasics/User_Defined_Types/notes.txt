@@ -1,0 +1,57 @@
+# User Defined Types
+
+## Building
+  - Declaring a class tells the compiler about a class.
+  - #include allows to keepo declaration in only one place (.h)
+  - Implementation of class stays in source file .cpp
+  - each file gets compiled and linked to generete the executable
+
+## Classes and Objects
+  - class keyword
+  - private and public sections
+  - declare each member
+
+## Objects
+  - Instance of Class
+  - Has own copy of member variable
+  - Member functions operate on member variables
+  - Contructor initialises a function (same name as class)
+  - Before constructor body runs member values are created
+
+## Scope
+  - An object lasts untill the close bracket of the body it was created in
+  - Destructor runs...
+  - arbitrary brace brackets can define a scope {}
+
+## Struct
+  - can have everything a class has but has default public visibility (class is private)
+
+## Namespaces
+  - avoid name collisions
+  - separate from other definitions via full name ::
+
+## Inheritance
+  - Key to OO design
+  - class Tweeter : public Person {};
+      - Tweeter inherits from Person
+
+## Enum
+  - Give name to a set of constants
+  - Names must be unique
+  - enum Status { Pending, Approved, Cancelled };
+
+## Scoped Enums
+  - Allows underlying type other than int
+  - Names dont have to be unique
+  - Use fully qualified names
+          enum class FileError {notfound, ok};
+          enum class NetworkError {disconnected, ok};
+          //name repetition 2 oks
+          NetworkError ne = NetworkError::ok;
+
+## PreProcessor
+  - lines start with # -> call to PreProcessor
+  - Control what is compiled
+  - can create a debug Buil
+  - Pragma once -> nonstandard expression that avoids re-including header files
+  - include everything you use and use include guards like pragma once
