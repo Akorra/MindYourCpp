@@ -1,0 +1,17 @@
+# Functions
+## Free functions
+  - freely usable, is not a member of a class.
+  - can also take parameters by reference
+    - int function(int& x)
+
+## Member Function
+  - Declare in class declaration (.h)
+  - Implement in .cpp
+  - in (.h) is called inline (only use if its short)
+  - Mark as const unless you cant (means it doesnt change any member variables)
+
+## Building
+  - Errors can come from linker or compiler
+  - Compiler error (Have you declared this function? -> making a promise)
+  - Linker error (Have you implemented that function -> keeping a promise)
+  

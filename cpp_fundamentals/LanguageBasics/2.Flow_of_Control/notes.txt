@@ -1,0 +1,23 @@
+# Flow of Control
+## If
+  - if(condition) action;
+
+## While
+  - while(condition) action;
+  - Check before first time
+  - Break leaves the loop
+  - do while runs first then checks
+
+## For
+  - for (int i= 0; i<10; i++){
+      action;
+    }
+
+## Switch
+  - Many statements, avoid nested ifs
+  - must be integral or enum
+
+## Immediate If
+  - if(something) result = 7;
+    else result = 302;
+  - result = something? 7:302;
