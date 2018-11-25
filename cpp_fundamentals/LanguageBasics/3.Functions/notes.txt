@@ -14,4 +14,8 @@
   - Errors can come from linker or compiler
   - Compiler error (Have you declared this function? -> making a promise)
   - Linker error (Have you implemented that function -> keeping a promise)
+
+  int* const is a const pointer to a [non-const] int
+  int const* is a [non-const] pointer to a const int
+  int const* const is a const pointer to a const int
   

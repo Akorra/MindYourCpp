@@ -1,0 +1,30 @@
+# Operators
+## Arithmatic
+  -> +, -, *, /;
+  -> +=, -=, *=, /=; (x=x+2 == x+=2);
+  -> i++, ++i, i--, --i; (postfix -> returns then increments, prefix -> increments then returs);
+  -> % ->remainder after division, modulo.
+  -> No Exponential;
+
+## Comparisons
+  -> <,>,<=,>=;
+  -> ==;
+  -> !=;
+  -> or (||);
+  -> and (&&);
+  -> not (!);
+
+## Bitwise Operators
+  -> &, |, ^
+  -> << >> shift
+
+## Operator Overloading
+  ->Write function that defines the Operator
+  ->Usually a member function
+  -> All operators are overloadable
+
+## Writing an Overload
+    bool MyClass::operator<(OtherType something) -> MyObject < something (Member Fucntion)
+    bool operator<(OtherType something, MyClass mc) -> Something < MyObject (Free Function)
+    friend declarations allow the declared function to see what is private in MyClass
+      friend bool operator<(int i, Person const& p);
