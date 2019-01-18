@@ -1,0 +1,40 @@
+# Templates
+ - Generic
+ - Resolved at compile time
+ - No runtime checks
+  - This slows down compile time, but improves runtime.
+
+## Template Functions
+ example:
+    template <class T>
+    T max(T const& t1, T const& t2){
+      return t1 < t2? t2:t1;
+    }
+
+    max(33,44)
+    max<double>(33,2.0) ---> returns a double
+
+## Template Classes
+  example:
+    template <class T>
+    class Accum
+    {
+    private:
+      T total;
+    public:
+      Accum(T start): total(start){
+        T operator += (T const& t)
+          {return total = total + t;};
+        T GetTotal() const {return total;}
+      }
+    }
+
+    Accum<int> integers(0);
+    Accum<string> strings("");
+
+## Template Specialization
+ - Some particular templates wont work for a partcualr Class
+  - Operator or funtion is missing
+  - Çogic in operator wont work for this case
+ - 1st Choice -> add operator or function with correct logic
+ - 2nd Choice -> Specialize the template
