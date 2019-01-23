@@ -21,7 +21,7 @@
 ## Operator Overloading
   ->Write function that defines the Operator
   ->Usually a member function
-  -> All operators are overloadable
+  ->All operators are overloadable
 
 ## Writing an Overload
     bool MyClass::operator<(OtherType something) -> MyObject < something (Member Fucntion)

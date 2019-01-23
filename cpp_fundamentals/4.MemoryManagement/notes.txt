@@ -1,0 +1,4 @@
+#Memory Management
+##The Free Store
+  - (Stack) local variables go out of scope when the function ends
+  - (Heap) free store is for longer lived variables
