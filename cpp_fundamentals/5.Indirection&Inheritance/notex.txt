@@ -1,0 +1,34 @@
+#Indirection and Inheritance
+## References and Inheritance
+  - Base class instance can refer to a derived class
+    - respects "is a" relationship
+  - Any class function can be called through a base refeenceto a derived instance
+    - Virtual function - derived class function executes *Polimorphism
+    - Nonvirtual function - base class function executes
+    - Virtual functions have performance hits and memeory hits
+  - Can't call derived class cunctions on base class reference.
+
+## Pointers and Inheritance
+  - Pointer to a base class can actually point to a derived instance
+  - Any base class function can be called through the pointer
+  - Smart Pointers work the same polymorfism wise
+  - if a function is marked as virtual allways returs de derivatice class fucntion from a base reference
+  - if there are virtual functions also mark destructor as virtual
+
+## Slicing
+  - If you copy objects around, slicing can occur
+   - Copy a derived obj into a base obj - extra member vars fall away
+   - Cant copy a base obj into derived obj
+  - Same rules when passing to a function by value
+   - A copy is made
+   - Slicing will happen
+  - Use references or pointers to avoid slicing
+
+## Casting and Ineritance
+  - A base class ptr can pt to a derived class obj
+    - now you can cast it to that derived class and use dervied methods
+  - static_cast<type> happens at compile time (dev needs to be sure)
+  - dynamic_cast<type> (runtime checl but works only when casting a pointer to a class with avirtual table, if fauls returns null)
+  - other casts (danger danger):
+    - const_cast
+    - reinterpret_cast
