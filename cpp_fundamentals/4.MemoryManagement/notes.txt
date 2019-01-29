@@ -2,3 +2,25 @@
 ##The Free Store
   - (Stack) local variables go out of scope when the function ends
   - (Heap) free store is for longer lived variables
+
+##Manual Memory Management
+  - If you get a pointer, from new, you have to keep track of it
+  - What i someone copies it? what if local var(pointer) goes out of scope to early?
+  - Destructor - deletes what may have been created with new
+  - Copy Constructor - uses new to initializa from existing value
+  - Copy assignment operator - deletes, then uses new to initialize
+  - Move constructor and Move assignment operator -> move expensive resource into another object instead of deleting and creating all
+
+##Easy Memory Management
+  - Handle copy and Move
+    - Prevent it (private or deleted copy constructor and copy assignment operator)
+    - Deep copy
+    - Shallow copy with reference count: copy increments, destructor decrements, delete at 0
+  - Operator Overloads (KEY)
+    - *
+    - ->
+
+##Standard Library Smart Pointers
+  - unique_ptr -> low overhead but noncopyable(use std::move)
+  - shared_ptr -> copyable, reference counted
+    - weak_ptr -> lets you peek at the shared_ptr without bumping reference count
