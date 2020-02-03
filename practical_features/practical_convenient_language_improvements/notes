@@ -1,0 +1,19 @@
+## Practical convenient language improvements
+
+# nested namespaces to organize code
+# namespace PuralsightEngine::Graphics::Rendering {}
+
+# find and replace sustrings
+# const auto it = find(begin(names), end(names), "connie");
+# if(it != end(names)) { * it = "***"; }
+
+# if declaration: C++17
+# if(const auto it = find(...); it != end(names)){ *it = "***"; }
+
+# if constexpr (condition) {} -> evaluated at compile time
+
+# Structured Bindings
+# auto [var1, var2, ...] = GetSomeData();
+# c++17 for maps: auto [poistion, success] = italianDictionary.insert({"seida", "chair"});
+# since insert returs a pair with position and bool of success
+# for (const auto& [italian, english] : iralianDicitoinary){ /* do stuff */ }

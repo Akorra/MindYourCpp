@@ -1,0 +1,29 @@
+## Standard Library Improvements
+#
+# Raw Pointer
+#  address of -> &;
+#  pointer to -> *;
+
+# Requsting Memory
+# normal variables are allocated on the stack
+#   -> fast alloction
+#   -> limited space (use heap for large data)
+# heap
+#   -> slower allocations
+#   -> can serve much larger chunks of data
+# For heap allocation use "new" -> double * p = new double[1000000];
+# dont forget to release memory delete [] p; p = nullptr;
+
+# Smart Pointers
+# unique_ptr (Automatically deleted)
+# auto p = std::make_unique<double[]>(1'000'000);
+
+# Standard defined literals
+# auto s = "connie";  -> char array
+# auto s = "connie"s; -> std::string
+# auto s = 10s        -> std::chrono::seconds (h, min, s, ms, us, ns)
+
+# std::tuple
+# #include <tuple>
+# generalization of std::pair
+# std::get<type>(tuple) OR std::get<index>(tuple)

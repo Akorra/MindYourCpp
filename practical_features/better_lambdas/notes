@@ -1,0 +1,15 @@
+# Lambdas
+#
+# [](int a, double b) { /* do something ... */ }
+# no name function
+# examble: std::sort(begin(vec), end(vec), [](string const& a, string const& b){ return a.length() < b.length(); })
+
+# Init captures
+# capture list -> [] of lambda captures variables declared outside lambda
+# [x, &y, z=64](auto a, auto b) { /* do something ... */ } 
+# y is captured by reference and can be altered
+# z is initialized
+
+# we can also use move operations from unique_ptr ("steals" data from source ptr to destination)
+# unique_ptr<X> p{...};
+# [u{move(p)}](/*parameters*/) { /* do something */ }

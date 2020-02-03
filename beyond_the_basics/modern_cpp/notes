@@ -1,0 +1,6 @@
+# Modern C++
+
+## Standard Library Smart Pointers
+### shared_ptr -> reference counting, count per copy, decrement on deletes, when counter goes to zero deletes memory
+               -> week_ptr lets you peek shared_ptr without bumping reference count
+### unique_ptr -> non-copyable (std::move)

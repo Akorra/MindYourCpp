@@ -1,0 +1,18 @@
+## Relaxed Constexpr Functions
+#
+#  constexpr double DoSomething -> evaluatesd and executed at compile time
+#  in c++14 we can have local variables and loops in constexpr functions
+
+## Variable Templates
+#
+# template <typename T>
+# constexptr T pi = T(3.141592653589793238462643383)
+#
+# pi<float>
+
+## [[deprecated]] attribute
+#
+# mark entities we wish people to stop using in next iterations
+# [[deprecated("DoSomething is inneficient!")]]
+#  void DoSomething() { ... }
+# emmits warning to compiler
