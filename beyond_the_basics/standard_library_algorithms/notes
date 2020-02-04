@@ -1,0 +1,37 @@
+# Standard Library Algorithms
+#
+# Expressivity
+# example: 3 loops do the same thing insert n elements at back of collection:
+## int i=0;
+## std::generate_n(std::back_inserter(v), 5, [&]() { return i++; }) //back inserter inserts at back
+#
+## for(int i=0; i<5; i++) { v.push_back(i) }
+#
+## for(int i=0; i<5; ) { v.push_back(i++); }
+#
+# example: accumulators:
+## int total = std::accumulate(begin(v), end(v), 0);
+#
+## int total = 0;
+## for(int i=0; i<5; i++) { total += v[i]; }
+#
+## int total = 0;
+## for(int i : v) { total += i; }
+#
+# example: count occurrences of digit 3
+## int cnt = std::count(begin(v), end(v), 3);
+#
+# example: removing 3's
+## auto v3 = v;
+## for(unsigned int i=0; i<v3.size(); i++) {
+##  if(v3[i]==3) v3.erase(v3.begin() + index);
+## }
+#
+## endv3 = std::remove_if(begin(v3), end(v3), [](int elem){return (elem==3); }); // returns iterator to new end
+## v3.erase(endv3, end(v3)); //we need to remove new end from old end
+#
+# More utilities
+# sort(begin(v), end(v));
+# all_of(begin(v), end(v), [](int elem) { return elem >= 0});
+# find(begin(v), end(v), 'a');
+# count_if(begin(v), end(v), [](int elem) { return elem >= 0});

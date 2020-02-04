@@ -1,0 +1,44 @@
+# Lambdas
+#
+## Tiny Functions
+#
+#   auto isOdd = [](int candidate){ return candidate % 2 != 0; };
+#   boo is2Odd = isOdd(2);
+#
+#   vector nums { 2, 3, 4, -1, 1 };
+#   int odds = std::count_if(begin(nums), end(nums), isOdd);
+
+## Parts of Lmbda
+#   [] -> capture clause
+#   () -> parameters
+#   [x,y] -> copy variables (passed by value)
+#   [&x,&y] -> changes affect original x and y (passed by refference)
+#   [x=a+1, y=std::move(b)] - alias or move capture
+
+#   [=] -> copy everything by value (in the body of lambda)
+#   [&] -> copy by reference
+#   Mutable -> signal changes
+
+# examples:
+##  for_each(begin(nums), end(nums),
+             [x, y, &message](int n) {
+                if(n>=x && n<=y)
+                  message += " " + std::to_string(n);
+             })
+
+## for_each(begin(nums), end(nums),
+            [&, x](int element){
+              x+= element; //not changed
+              y+= element  //changed
+            }
+
+## auto pOBJ = make_unique<OBJ>(", ");
+   for_each(begin(nums), end(nums),
+            [=, &message, p= std::move(pOBJ)](int n{
+            if(n>=x && n<=y)
+              message += p->GetName() + std::to_string(n);
+            }
+  //lambda takes control of unique ptr
+
+## Return
+#  [](int n) -> double {...}

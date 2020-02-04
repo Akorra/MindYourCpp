@@ -1,0 +1,32 @@
+# Move Semantics
+#
+# Move takes less time than copying
+# Move constructor:
+## ObjectClass::ObjectClass(OnjectClass&& r) : field1(std::move(r.field1)) {}
+
+# Assignment
+## ObjectClass& ObjectClass::operator(ObjectClass&& r){
+      if(this != &r)
+      {
+        filed1 = std::move(r.field1);
+        r.field1.clear();
+      }
+      return *this;
+   }
+
+# RValue References
+# ObjectClass && rrx - an rvalue reference to some disappearing instance of ObjectClass
+# are about to go away
+
+# Move Constructor, Move Assignment Operator
+# Object(Object&& r);
+# Object::Object(Object&& r) : field(std::move(r.field)) {}
+# Object& operator=(Object&& r);
+# Object& Object::operator=(Object&& r){
+#   if(this != &r)
+#   {
+#     field = std::move(r.field);
+#     r.field.clear();
+#   }
+#   return *this;
+# }
