@@ -1,0 +1,10 @@
+# Safely Using Arrays
+#
+# Array - collection of elements identified by an index/key.
+# contiguous memory locations -> good performance (cache friendly)
+# same type data -> homogeneous data structure
+
+# -fsanitize=address -> adress sanitizer -> detects memory errors
+# -g produce additional debugging inflormation
+# -01 allow minimal optimizations
+# clang++ -std=c++14 -fsanitize=address -g -01 file.cpp

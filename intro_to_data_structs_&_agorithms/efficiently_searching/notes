@@ -1,0 +1,9 @@
+# Efficiently Searching
+#
+## Linear Search (O(N))
+#  go element by elemnet untill found.
+#
+## Binary Search (O(log(N)))
+#  ordered arrays, start at midle and bisect array then repeat untill found.
+#
+## Big O notation
